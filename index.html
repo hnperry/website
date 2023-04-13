@@ -1,111 +1,168 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Data Portfolio - Nikki Perry</title>
-    
-    <link rel="shortcut icon" href="{favicon}">
-    <meta name="description" content="{MetaDescription}"/>
+<title>Nikki Perry - Data Portfolio</title>
 
-    <!-- fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&family=Montserrat:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Karla:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
-    
-    <!-- normalize -->
-    <link href="https://necolas.github.io/normalize.css/7.0.0/normalize.css" rel="stylesheet">
-    
-<style>
-:root {
-    --background:#f0fdff;
-    --boxes-background:#fff;
-    --text:#333;
-    --links: #829fbb;
-    --links-hover: #36608c;
-    --borders:#eee;
-    --icons: #36608c;
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="{Favicon}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Baloo+2&family=Bitter&family=Comfortaa&family=Fira+Code&family=Merriweather&family=Montserrat+Alternates&family=Noto+Sans+Mono&family=Passion+One&family=Playfair+Display&family=Poppins&family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<style type="text/css">
+/*all colors and fonts can be changed here in the root section*/
+:root{
+    --background:#f6f6f6;
+    --accent:#4525b9;
+    --container-backgrounds:#eee;
+    --text:#1e3026;
+    --links:#12067e;
+    --font-size:.9em;
+    --heading-font:'Bitter';
+    --font:'Bitter';
+    /*
+    you can change the font to any standard browser font or the following       google fonts i have included:
+        - 'Abril Fatface'
+        - 'Baloo 2'
+        - 'Bitter'
+        - 'Comfortaa'
+        - 'Fira Code'
+        - 'Merriweather'
+        - 'Montserrat Alternates'
+        - 'Noto Sans Mono'
+        - 'Passion One'
+        - 'Playfair Display'
+        - 'Poppins'
+        - 'Roboto'
+        - 'Roboto Slab'
+    */
+}
+/*tumblr controls*/
+.iframe-controls--desktop{
+    position:fixed;
+    right:0px;
+    z-index:999999999999;
+    filter:invert(100%);
+    -webkit-filter:invert(100%);
+    -webkit-transform:scale(0.8,0.8);
+    -webkit-transform-origin: 100% 0%;
+    -ms-transform-origin:100% 0%;
+    -ms-transform:scale(0.8,0.8);
+    transform:scale(0.8,0.8);
+    transform-origin:100% 0%;
+}
+/*body*/
+*{
+    box-sizing:border-box;
+}
+html, body{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background:var(--background);
+    color:var(--text);
+    font-size:var(--font-size);
+    font-family:var(--font);
+}
+a, a:visited{
+    color:var(--links);
+    text-decoration:none;
+}
+a:hover{ 
+    color:var(--accent);
 }
 
-pre {font-family:consolas;
-    white-space: pre-wrap;       /* css-3 */
-    white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-    white-space: -pre-wrap;      /* Opera 4- */
-    white-space: -o-pre-wrap;    /* Opera 7 */
-    word-wrap: break-word;}      /* Internet Explorer 5.5+ */
-
-body, figure{margin:0;padding:0}
-html{font: 14px 'Karla', sans-serif;}
-body {font-size:14px;color:var(--text);background:var(--background);}
-a {text-decoration: none;color:var(--links);word-break:break-word;}
-a:hover {color:var(--links-hover);}
-blockquote {margin:0;padding:0;}
-img {max-width:100%;height: auto;display: block;margin: .7rem 0}
-hr {border:0;border-top:1px solid var(--borders);margin:0;}
-
-* {
-    box-sizing: border-box;
+a:active{
+    color:var(--text);
+}
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    font-family:var(--heading-font);
+    text-align: center;
 }
 
-.box-divider {
-    margin:2rem auto;
-    width: 20rem;
+h3{
+    margin:0;
+    text-align: center;
+    font-family:var(--heading-font);
+}
+/*header*/
+header{
+    text-align:center;
+    padding:10px;
+    background:var(--container-backgrounds);
+}
+header img{
+    width:80px;
+    height:80px;
+}
+/*questions*/
+main{
+    margin:50px auto;
+    width:80%;
+    background:var(--container-backgrounds);
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+}
+.item{
+    display:inline-block;
+    margin:10px;
+    height:300px;
+    width:350px;
+    overflow:hidden;
+    border:1px solid var(--accent);
+}
+.item img{
+    height:300px;
+    width:350px;
+}
+about{
+    margin:50px auto;
+    width:80%;
+    background:var(--container-backgrounds);
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+}
+.item-about{
+    display:inline-block;
+    margin:10px;
+    height:200px;
+    width:200px;
+    overflow:hidden;
+    border:1px solid var(--accent);
+}
+.item-about img{
+    height:200px;
+    width:200px;
 }
 
-/* blogs */
+.desc-about{
+    display:inline-block;
+    margin:10px;
+    height:200px;
+    width:500px;
+    overflow:hidden;
+    border:1px solid var(--accent);
+}
 
-#blogs-wrapper {list-style: none;}
 
-#blogs-wrapper li{
+/* socials */
+
+#socials nav {
     display: flex;
+    justify-content: center;
     flex-flow: row wrap;
-    align-items:center;
-    justify-content: space-between;
-    margin: 1rem 0;
-    padding:0 .5rem;
-    transition-duration: .5s;
+    list-style: none;
 }
 
-#blogs-wrapper li:hover{
-    background-color: var(--links);
-    border-radius: 5px;
-}
-
-#blogs-wrapper .blogs-names{
-    width: calc(100% - 5.5rem);
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-}
-
-.blogs-names {margin: .5rem 0;}
-
-.blog-title {
-    display: block;
-    font:300 1rem 'Montserrat', sans-serif;
-    text-transform: lowercase;
-}
-
-/* headshot */
-
-.circular_image {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  overflow: hidden;
-  background-color: blue;
-  /* commented for demo
-  float: left;
-  margin-left: 125px;
-  margin-top: 20px;
-  */
-  
-  /*for demo*/
-  display:inline-block;
-  vertical-align:middle;
-}
-.circular_image img{
-  width:100%;
+#socials nav li {
+    margin:1rem;
+    font-size: 2rem;
 }
 
 /* photo hover effect */
@@ -151,233 +208,86 @@ hr {border:0;border-top:1px solid var(--borders);margin:0;}
   transform: translateY(0);
 }
 
-/* boxes */
-
-#container {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    background-color: var(--background);
-    max-width: 80rem;
-    margin:5rem auto
+.box-divider {
+    margin:1rem auto;
+    width: 50rem;
 }
-
-#about-box {
-    width: 30%;
-    height: 30rem;
-    margin:auto;
-}
-
-.box-inner {
-    background-color: var(--boxes-background);
-    padding:1rem;
-    border:1px solid var(--borders);
-    border-radius:5px;
-    
-}
-
-/* socials */
-
-#socials nav {
-    display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    list-style: none;
-}
-
-#socials nav li {
-    margin:1rem;
-    font-size: 2rem;
-}
-
-/* about section */
-
-/* about title subtitle */
-#about-header {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
-    margin:1rem 0;
-    background-color: var(--boxes-background);
-    padding:1rem;
-    border:1px solid var(--borders);
-    border-radius:5px;
-}
-
-#page-title{
-    font:600 1.3rem 'Montserrat', sans-serif;
-    margin:.2rem 0;
-}
-
-/* about image */
-
-.about-image {
-    width: 100%;
-    margin:2rem 0 0;
-    padding:0;
-    height: 100%;
-    object-fit: cover;
-    border-radius:5px;
-}
-
-/* about info */
-
-#about-info {
-    margin-top: 2rem;
-    font-size: 1rem;
-    text-align: center;
-}
-
-#about-info li{
-    list-style: none;
-    display: inline-block;
-    margin:.5rem 0
-}
-
-#about-info li:after{
-    content: '\f111';
-    font-family: 'Font Awesome 5 Free';
-    font-weight: 900;
-    margin:0 1rem;
-    font-size: .4rem;
-    color: var(--icons);
-    vertical-align: middle;
-}
-
-#about-info li:last-of-type:after{
-    content: '';
-    display:none;
-}
-
-#about-text {
-    background-color: var(--background);
-    padding:1rem;
-    border:1px solid var(--borders);
-}
-
 </style>
 </head>
 <body>
 
-<main id="container">
-    <div class="box-inner">
-    <b>Nikki Perry - Data Analyst</b>
+<header>
+    <h1>Nikki Perry - Data Portfolio</h1>
     <hr class="box-divider">
-    <img class="circular_image" src="headshot.jpg"/>
+    <h4>B.A. Mathematics, UNC Chapel Hill</h4>
     <hr class="box-divider">
-    <b>B.A. Mathematics, UNC Chapel Hill</b>
-
-    <!-- blogs start -->
-    <article id="blogs-wrapper">
-        
-        
-        <!-- blog start -->
-        <a href="BLOG LINK" target="_blank"><li>
-
-            <div class="blogs-names">
-                <!-- blog name -->
-                <span class="blog-title">Resume</span>
-            </div>
-
-        </li></a>
-        <!-- blog end -->
-
-        
-        
-        <!-- blog start -->
-        <a href="BLOG LINK" target="_blank"><li>
-
-            <div class="blogs-names">
-                <!-- blog name -->
-                <span class="blog-title">Transcript</span>
-            </div>
-
-        </li></a>
-        <!-- blog end -->
-        <hr class="box-divider">
-
-
-    <!-- socials start -->
     <article id="socials">
-        <!-- find more icons at http://fontawesome.io/icons/ -->
-
         <nav>
             <li><a href="mailto:info@hnperry.com"><i class="fa-solid fa-envelope"></i></a></li>
-            <li><a href="https://linkedin.com/nikki-perry-9bb57b15a/"><i class="fa-brands fa-linkedin"></i></a></li> 
+            <li><a href="https://linkedin.com/in/nikki-perry-9bb57b15a/"><i class="fa-brands fa-linkedin"></i></a></li> 
             <li><a href="https://github.com/hnperry"><i class="fa-brands fa-github"></i></a></li>
         </nav>
-
     </article>
-    <!-- socials end -->
+</header>
 
-</div></section>
-<!-- navigations section end -->
-
-
-<!-- project 1 start -->
-<section id="about-box" class="container-box"><div class="box-inner">
+<!--open container-->
+<main>
+    <!--begin portfolio section-->
+    <div class="grid-container">
+    <h3>Portfolio</h3>
+        <!--begin item-->
         
-    <!-- title start -->
-    <div id="about-header">
-        <h1 id="page-title">Amazon Book Reviews: Web Scraping and Visualization</h1>
-    </div>
-    <!-- title end -->
-
-
-    <!-- about image start -->
-    <div class="img__wrap">
-        <img class="img__img" src="amazonreviews.png" />
-        <div class="img__description_layer">
-          <p class="img__description">This project scraped and analyzed reviews from Amazon</p>
+        <div class="item">
+            <div class="img__wrap">
+                <img class="img__img" src="amazonreviews.png" />
+                <div class="img__description_layer">
+                  <p class="img__description">This project scraped and analyzed reviews from Amazon</p>
+                </div>
+            </div>
         </div>
-      </div>
-    <!-- about image end -->
-    
-    <!-- info start -->
-    <article id="about-info">
-        <li><a href="https://public.tableau.com/app/profile/nikki.perry/viz/AmazonBookReviewsHarukiMurakami/Dashboard1">tableau</a></li>
-        <li><a href="https://github.com/hnperry/amazonreviews">github</a></li>    
-        <li><a href="https://www.kaggle.com/datasets/nikkiperry/amazon-book-reviews-haruki-murakami">kaggle</a></li>
-    </article>
-    <!-- info end -->
-
-</div></section>
-<!-- project 1 end -->
-
-
-<!-- project 2 start -->
-<section id="about-box" class="container-box"><div class="box-inner">
+        <!--end item-->
         
-    <!-- title start -->
-    <div id="about-header">
-        <h1 id="page-title">Amazon Book Reviews: Web Scraping and Visualization</h1>
-    </div>
-    <!-- title end -->
-
-
-    <!-- about image start -->
-    <div class="img__wrap">
-        <img class="img__img" src="amazonreviews.png" />
-        <div class="img__description_layer">
-          <p class="img__description">This project scraped and analyzed reviews from Amazon</p>
+        <!--begin item-->
+        <div class="item">
+            <div class="img__wrap">
+                <img class="img__img" src="amazonreviews.png" />
+                <div class="img__description_layer">
+                  <p class="img__description">This project scraped and analyzed reviews from Amazon</p>
+                </div>
+            </div>
         </div>
-      </div>
-    <!-- about image end -->
+        <!--end item-->
+        
+    </div>
+    <!--end portfolio section-->
+</main>
 
-    <!-- info start -->
-    <article id="about-info">
-        <li><a href="https://public.tableau.com/app/profile/nikki.perry/viz/AmazonBookReviewsHarukiMurakami/Dashboard1">tableau</a></li>
-        <li><a href="https://github.com/hnperry/amazonreviews">github</a></li>    
-        <li><a href="https://www.kaggle.com/datasets/nikkiperry/amazon-book-reviews-haruki-murakami">kaggle</a></li>
-    </article>
-    <!-- info end -->
+<about>
+    <!--begin about section-->
+    <div class="grid-container">
+        <h3>About Me</h3>
+            <!--begin item-->
+            <div class="item-about">
+                <img src="headshot.jpg">
+            </div>
+            <!--end item-->
+            
+            <div class="desc-about">
+                <h2>I am an aspiring data analyst
+                </h2>
+            </div>
+            <!--begin item-->
+            <div class="item-about">
+                <img src="graphic_design_is_my_passion.png">
+            </div>
+            <!--end item-->
 
-</div></section>
-<!-- project 2 end -->
+        </div>
+        <!--end about section-->
+</about>
+<!--close container-->
 
 <!-- icons font -->
 <script src="https://kit.fontawesome.com/0993e30c04.js" crossorigin="anonymous"></script>
-
 </body>
 </html>
