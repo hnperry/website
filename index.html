@@ -39,20 +39,7 @@
         - 'Roboto Slab'
     */
 }
-/*tumblr controls*/
-.iframe-controls--desktop{
-    position:fixed;
-    right:0px;
-    z-index:999999999999;
-    filter:invert(100%);
-    -webkit-filter:invert(100%);
-    -webkit-transform:scale(0.8,0.8);
-    -webkit-transform-origin: 100% 0%;
-    -ms-transform-origin:100% 0%;
-    -ms-transform:scale(0.8,0.8);
-    transform:scale(0.8,0.8);
-    transform-origin:100% 0%;
-}
+
 /*body*/
 *{
     box-sizing:border-box;
@@ -81,74 +68,68 @@ a:active{
 h1,h2,h3,h4,h5,h6{
     margin:0;
     font-family:var(--heading-font);
+    line-height: 150%;
     text-align: center;
 }
 
-h3{
-    margin:0;
-    text-align: center;
-    font-family:var(--heading-font);
-}
 /*header*/
 header{
     text-align:center;
     padding:10px;
     background:var(--container-backgrounds);
 }
-header img{
-    width:80px;
-    height:80px;
-}
-/*questions*/
+
+/*body*/
 main{
     margin:50px auto;
-    width:80%;
+    width:90%;
     background:var(--container-backgrounds);
     display:flex;
     flex-flow:row wrap;
+    position:relative;
+    text-align: center;
     justify-content:center;
 }
 .item{
     display:inline-block;
     margin:10px;
-    height:300px;
-    width:350px;
+    height: 75%;
+    width:30%;
     overflow:hidden;
+    position: relative;
+    align-items: center;
     border:1px solid var(--accent);
 }
 .item img{
-    height:300px;
-    width:350px;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
 }
 about{
     margin:50px auto;
-    width:80%;
+    width:90%;
     background:var(--container-backgrounds);
     display:flex;
     flex-flow:row wrap;
-    justify-content:center;
+    position:relative;
+    align-items: center;
 }
 .item-about{
-    display:inline-block;
+    display:inline;
     margin:10px;
-    height:200px;
-    width:200px;
-    overflow:hidden;
+    float:left;
+    width: 70%;
     border:1px solid var(--accent);
 }
-.item-about img{
-    height:200px;
-    width:200px;
+.about img{
+    display:inline;
+    margin:10px;
+    float:left;
+    width: 20%;
+    border:1px solid var(--accent);
 }
 
-.desc-about{
-    display:inline-block;
-    margin:10px;
-    height:200px;
-    width:500px;
-    overflow:hidden;
-    border:1px solid var(--accent);
-}
 
 
 /* socials */
@@ -202,15 +183,17 @@ about{
   transition: .2s;
   transform: translateY(1em);
   text-align: center;
+  line-height: 150%;
 }
 
 .img__wrap:hover .img__description {
   transform: translateY(0);
 }
 
+/* divider */
 .box-divider {
     margin:1rem auto;
-    width: 50rem;
+    width: 70%;
 }
 </style>
 </head>
@@ -234,14 +217,25 @@ about{
 <main>
     <!--begin portfolio section-->
     <div class="grid-container">
-    <h3>Portfolio</h3>
+    <br><h3>Portfolio</h3>
+
         <!--begin item-->
-        
         <div class="item">
             <div class="img__wrap">
-                <img class="img__img" src="amazonreviews.png" />
+                <img class="img__img" src="blackscreen.jpg" />
                 <div class="img__description_layer">
-                  <p class="img__description">This project scraped and analyzed reviews from Amazon</p>
+                <p class="img__description"><b>Coming soon</b><br>...</p>
+                </div>
+            </div>
+        </div>
+        <!--end item-->
+
+        <!--begin item-->
+        <div class="item">
+            <div class="img__wrap">
+                <img class="img__img" src="chatgpt.jpg" />
+                <div class="img__description_layer">
+                  <p class="img__description"><b>Sentiment Analysis of ChatGPT Tweets</b><br>This project explored term frequency, topic, and sentiment of tweets tagged #chatgpt</p>
                 </div>
             </div>
         </div>
@@ -252,7 +246,7 @@ about{
             <div class="img__wrap">
                 <img class="img__img" src="amazonreviews.png" />
                 <div class="img__description_layer">
-                  <p class="img__description">This project scraped and analyzed reviews from Amazon</p>
+                  <p class="img__description"><b>Amazon Reviews</b><br>This project scraped and analyzed reviews from Amazon</p>
                 </div>
             </div>
         </div>
@@ -265,24 +259,17 @@ about{
 <about>
     <!--begin about section-->
     <div class="grid-container">
-        <h3>About Me</h3>
+        <br><h3>About Me</h3>
             <!--begin item-->
-            <div class="item">
+            <div class="about img">
                 <img src="headshot.jpg">
             </div>
             <!--end item-->
             
-            <div class="item">
-                <h2>I am an aspiring data analyst
-                </h2>
+            <div class="item-about">
+                <h4>I am an aspiring data analyst with experience in Python, Tableau, SQL, R, and PowerBI. I am interested in data visualization techniques and machine learning. This last sentence is me writing more stuff for css testing purposes.
+                </h4>
             </div>
-
-            <!--begin item-->
-            <div class="item">
-                <img src="graphic_design_is_my_passion.png">
-            </div>
-            <!--end item-->
-
         </div>
         <!--end about section-->
 </about>
