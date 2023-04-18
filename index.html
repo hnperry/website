@@ -89,6 +89,7 @@ main{
     position:relative;
     text-align: center;
     justify-content:center;
+  
 }
 .item{
     display:inline-block;
@@ -96,7 +97,7 @@ main{
     height:190px;
     width:350px;
     overflow:hidden;
-    border:1px solid var(--accent);
+    border:1px dotted var(--accent);
 }
 .item img{
     background-size: cover;
@@ -104,31 +105,38 @@ main{
     width: 100%;
     height: 100%;
 }
+
+/* about */
+
 about{
     margin:50px auto;
     width:90%;
     background:var(--container-backgrounds);
     display:flex;
-    flex-flow:row wrap;
-    position:relative;
-    align-items: center;
+
 }
-.item-about{
-    display:inline;
+section{
+    padding:20px;
     margin:10px;
-    float:left;
-    width: 70%;
-    border:1px solid var(--accent);
-}
-.about img{
-    display:inline;
-    margin:10px;
-    float:left;
-    width: 20%;
-    border:1px solid var(--accent);
+    border:1px dotted var(--accent);
 }
 
+ul {
+    list-style: circle;
+    padding: 10px;
+    margin: 0;
+}
+.menu {
+    
+    justify-content: space-around;
+}
 
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 /* socials */
 
@@ -191,6 +199,7 @@ about{
 /* divider */
 .box-divider {
     margin:1rem auto;
+    border-bottom:.5px dotted var(--accent);
     width: 70%;
 }
 </style>
@@ -250,28 +259,42 @@ about{
         </div>
         <!--end item-->
         
+        
     </div>
     <!--end portfolio section-->
 </main>
 
 <about>
-    <!--begin about section-->
-    <div class="grid-container">
-        <br><h3>About Me</h3>
-            <!--begin item-->
-            <div class="about img">
-                <img src="headshot.jpg">
-            </div>
-            <!--end item-->
-            
-            <div class="item-about">
-                <h4>I am an aspiring data analyst with experience in Python, Tableau, SQL, R, and PowerBI. I am interested in data visualization techniques and machine learning. This last sentence is me writing more stuff for css testing purposes.
-                </h4>
-            </div>
-        </div>
-        <!--end about section-->
+    <!--begin section-->
+    <section class="bio-info">
+        <center>
+            <img src="headshot.jpg" width=150px>
+        </center>
+    </section>
+    <!--end section-->
+
+    <!--begin section-->
+    <section class="about-info">
+        <h3>About</h3>
+        <p>I am an aspiring data analyst with experience in Python, Tableau, SQL, R, and PowerBI. I am interested in data visualization techniques and machine learning. This last sentence is me writing more stuff for css testing purposes.
+        </p>
+    </section>
+    <!--end section-->
+
+     <!--begin section-->
+     <section class="links">
+        <h3>Links</h3>
+        <ul class="menu">
+            <li><a href="coffee_prices.pdf">Resume</a></li>
+            <li><a href="coffee_prices.pdf">Transcript</a></li>
+        </ul>
+        
+    </section>
+    <!--end section-->
+    
 </about>
-<!--close container-->
+    
+
 
 <!-- icons font -->
 <script src="https://kit.fontawesome.com/0993e30c04.js" crossorigin="anonymous"></script>
