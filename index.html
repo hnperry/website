@@ -54,17 +54,37 @@ body{
     font-size:var(--font-size);
     font-family:var(--font);
 }
-a, a:visited{
+/* links */
+a{
     color:var(--links);
     text-decoration:none;
+}
+a:visited{
+    color:var(--links);
 }
 a:hover{ 
     color:var(--accent);
 }
 
 a:active{
-    color:var(--text);
+    color:#5731dd;
 }
+a.alt{
+    color: #fff;
+    text-decoration:none;
+}
+a.alt:visited{
+    color: #fff;
+}
+a.alt:hover{ 
+    color:#ffffffb2;
+}
+
+a.alt:active{
+    color:#ffffff63;
+}
+
+/* text */
 h1,h2,h3,h4,h5,h6{
     margin:0;
     font-family:var(--heading-font);
@@ -72,7 +92,7 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
 
-/*header*/
+/* header */
 header{
     text-align:center;
     padding:10px;
@@ -107,32 +127,34 @@ main{
 }
 
 /* about */
-
 about{
     margin:50px auto;
     width:90%;
     position:relative;
     background:var(--container-backgrounds);
     display:flex;
-
+    text-align: center;
+    justify-content:center;
+    flex-flow:row wrap;
 }
 section{
-    padding:20px;
     display:inline-block;
+    padding:20px;
     margin:10px;
+    overflow:hidden;
     border:1px dotted var(--accent);
 }
-
+.about-info{
+    width: 700px;
+}
 ul {
     list-style: circle;
     padding: 10px;
     margin: 0;
 }
 .menu {
-    
     justify-content: space-around;
 }
-
 .center {
   display: block;
   margin-left: auto;
@@ -141,14 +163,12 @@ ul {
 }
 
 /* socials */
-
 #socials nav {
     display: flex;
     justify-content: center;
     flex-flow: row wrap;
     list-style: none;
 }
-
 #socials nav li {
     margin:1rem;
     font-size: 2rem;
@@ -159,11 +179,9 @@ ul {
   position: relative;
   display: inline-block;
 }
-
 .img__img {
   vertical-align: bottom;
 }
-
 .img__description_layer {
   position: absolute;
   top: 0;
@@ -181,19 +199,16 @@ ul {
   /* transition effect */
   transition: opacity .5s, visibility .7s;
 }
-
 .img__wrap:hover .img__description_layer {
   visibility: visible;
   opacity: 1;
 }
-
 .img__description {
   transition: .2s;
   transform: translateY(1em);
   text-align: center;
   line-height: 150%;
 }
-
 .img__wrap:hover .img__description {
   transform: translateY(0);
 }
@@ -244,7 +259,7 @@ ul {
             <div class="img__wrap">
                 <img class="img__img" src="chatgpt.jpg" />
                 <div class="img__description_layer">
-                  <p class="img__description"><b>Sentiment Analysis of ChatGPT Tweets</b><br>This project explored term frequency, topic, and sentiment of tweets tagged #chatgpt</p>
+                  <p class="img__description"><a class="alt" href="https://github.com/hnperry/chatgpt-tweets">Sentiment Analysis of ChatGPT Tweets</a><br>This project explored term frequency, topic, and sentiment of tweets tagged #chatgpt</p>
                 </div>
             </div>
         </div>
@@ -255,7 +270,7 @@ ul {
             <div class="img__wrap">
                 <img class="img__img" src="amazonreviews.png" />
                 <div class="img__description_layer">
-                  <p class="img__description"><b>Amazon Reviews</b><br>This project scraped and analyzed reviews from Amazon</p>
+                  <p class="img__description"><a class="alt" href="https://github.com/hnperry/amazonreviews">Amazon Reviews</a><br>This project scraped and analyzed reviews from Amazon</p>
                 </div>
             </div>
         </div>
