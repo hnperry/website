@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+<!--
+gallery base page by @capecoding (owner: @foundcas)
+made with no javascript
+
+- keep the credit intact if no edits are made
+- if you have any feedback, questions, or suggestions send them to 
+  capecoding.tumblr.com/ask
+- more pages and themes can be found at capecoding.tumblr.com
+- if you found this base code useful consider supporting me on ko-fi:
+  ko-fi.com/foundcas
+
+88888   888888   88888  88888  88888  88888  88888   88888
+8       8    8   8   8  8      8      8   8  8    8  8
+8       888888   88888  8888   8      8   8  8    8  88888
+8       8    8   8      8      8      8   8  8    8  8
+88888   8    8   8      88888  88888  88888  88888   88888
+-->
+<title>gallery</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="icon" href="{Favicon}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Baloo+2&family=Bitter&family=Comfortaa&family=Fira+Code&family=Merriweather&family=Montserrat+Alternates&family=Noto+Sans+Mono&family=Passion+One&family=Playfair+Display&family=Poppins&family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+<style type="text/css">
+/*all colors and fonts can be changed here in the root section*/
+:root{
+    --background:#f6f6f6;
+    --accent:#efae20;
+    --container-backgrounds:#eee;
+    --text:#1e3026;
+    --links:#de375b;
+    --font-size:.9em;
+    --heading-font:'Merriweather';
+    --font:'poppins';
+    /*
+    you can change the font to any standard browser font or the following       google fonts i have included:
+        - 'Abril Fatface'
+        - 'Baloo 2'
+        - 'Bitter'
+        - 'Comfortaa'
+        - 'Fira Code'
+        - 'Merriweather'
+        - 'Montserrat Alternates'
+        - 'Noto Sans Mono'
+        - 'Passion One'
+        - 'Playfair Display'
+        - 'Poppins'
+        - 'Roboto'
+        - 'Roboto Slab'
+    */
+}
+/*tumblr controls*/
+.iframe-controls--desktop{
+    position:fixed;
+    right:0px;
+    z-index:999999999999;
+    filter:invert(100%);
+    -webkit-filter:invert(100%);
+    -webkit-transform:scale(0.8,0.8);
+    -webkit-transform-origin: 100% 0%;
+    -ms-transform-origin:100% 0%;
+    -ms-transform:scale(0.8,0.8);
+    transform:scale(0.8,0.8);
+    transform-origin:100% 0%;
+}
+/*body*/
+*{
+    box-sizing:border-box;
+}
+html, body{
+    margin:0px;
+    padding:0px;
+}
+body{
+    background:var(--background);
+    color:var(--text);
+    font-size:var(--font-size);
+    font-family:var(--font);
+}
+a, a:visited{
+    color:var(--links);
+    text-decoration:none;
+}
+a:hover{ 
+    color:var(--accent);
+}
+
+a:active{
+    color:var(--text);
+}
+h1,h2,h3,h4,h5,h6{
+    margin:0;
+    font-family:var(--heading-font);
+}
+/*header*/
+header{
+    text-align:center;
+    padding:10px;
+    background:var(--container-backgrounds);
+}
+header img{
+    width:80px;
+    height:80px;
+}
+/*questions*/
+main{
+    margin:50px auto;
+    width:80%;
+    background:var(--container-backgrounds);
+    display:flex;
+    flex-flow:row wrap;
+    justify-content:center;
+}
+.item{
+    display:inline-block;
+    margin:10px;
+    height:200px;
+    width:250px;
+    overflow:hidden;
+    border:1px solid var(--accent);
+}
+.item img{
+    height:175px;
+    width:250px;
+}
+.item-info h4{
+    display:inline;
+}
+.jump-to{
+    position:absolute;
+    margin-top:-20px;
+}
+</style>
+</head>
+<body>
+
+<header>
+    <img src="https://64.media.tumblr.com/746384302b0c38d8d8805ca2f868555e/56b1e23d58088b89-ce/s250x400/d261d05448c4e36b864e1a308727a2a7c1aa57db.png">
+    <h1>title</h1>
+    <h2>subtitle</h2>
+    <nav>
+        <a href="/">home</a> 
+        <a href="/ask">ask</a> 
+        <a href="https://capecoding.tumblr.com">credit</a>
+    </nav>
+</header>
+
+<!--open container-->
+<main>
+    <div class="jump-to">
+        <a href="#section1">section 1</a> |
+        <a href="#section2">section 2</a> |
+        <a href="#section3">section 3</a>
+    </div>
+    <!--begin section-->
+    <div class="grid-container">
+    <h3 id="section1">section 1</h3>
+        <!--begin item-->
+        <div class="item">
+            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
+            <div class="item-info">
+                <h4>title</h4>
+                - <a href="/">link</a>
+            </div>
+        </div>
+        <!--end item-->
+        
+        <!--begin item-->
+        <div class="item">
+            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
+            <div class="item-info">
+                <h4>title</h4>
+                - <a href="/">link</a>
+            </div>
+        </div>
+        <!--end item-->
+        
+        <!--begin item-->
+        <div class="item">
+            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
+            <div class="item-info">
+                <h4>title</h4>
+                - <a href="/">link</a>
+            </div>
+        </div>
+        <!--end item-->
+    </div>
+    <!--end section-->
+    
+    <!--begin section-->
+    <div class="grid-container">
+    <h3 id="section2">section 2</h3>
+        <!--begin item-->
+        <div class="item">
+            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
+            <div class="item-info">
+                <h4>title</h4>
+                - <a href="/">link</a>
+            </div>
+        </div>
+        <!--end item-->
+        
+        <!--begin item-->
+        <div class="item">
+            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
+            <div class="item-info">
+                <h4>title</h4>
+                - <a href="/">link</a>
+            </div>
+        </div>
+        <!--end item-->
+        
+        <!--begin item-->
+        <div class="item">
+            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
+            <div class="item-info">
+                <h4>title</h4>
+                - <a href="/">link</a>
+            </div>
+        </div>
+        <!--end item-->
+    </div>
+    <!--end section-->
+    
+    
+    <!--begin section-->
+    <div class="grid-container">
+    <h3 id="section3">section 3</h3>
+        <!--begin item-->
+        <div class="item">
+            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
+            <div class="item-info">
+                <h4>title</h4>
+                - <a href="/">link</a>
+            </div>
+        </div>
+        <!--end item-->
+        
+        <!--begin item-->
+        <div class="item">
+            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
+            <div class="item-info">
+                <h4>title</h4>
+                - <a href="/">link</a>
+            </div>
+        </div>
+        <!--end item-->
+        
+        <!--begin item-->
+        <div class="item">
+            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
+            <div class="item-info">
+                <h4>title</h4>
+                - <a href="/">link</a>
+            </div>
+        </div>
+        <!--end item-->
+    </div>
+    <!--end section-->
+
+</main>
+<!--close container-->
+
+</body>
+</html>
