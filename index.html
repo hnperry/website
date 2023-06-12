@@ -1,319 +1,112 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Nikki Perry - Data Portfolio</title>
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link rel="icon" href="{Favicon}">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Baloo+2&family=Bitter&family=Comfortaa&family=Fira+Code&family=Merriweather&family=Montserrat+Alternates&family=Noto+Sans+Mono&family=Passion+One&family=Playfair+Display&family=Poppins&family=Roboto+Slab&family=Roboto:wght@300&display=swap" rel="stylesheet">
-
-<style type="text/css">
-/*all colors and fonts can be changed here in the root section*/
-:root{
-    --background:#f6f6f6;
-    --accent:#4525b9;
-    --container-backgrounds:#eee;
-    --text:#1e3026;
-    --links:#12067e;
-    --font-size:.9em;
-    --heading-font:'Bitter';
-    --font:'Bitter';
-    /*
-    you can change the font to any standard browser font or the following       google fonts i have included:
-        - 'Abril Fatface'
-        - 'Baloo 2'
-        - 'Bitter'
-        - 'Comfortaa'
-        - 'Fira Code'
-        - 'Merriweather'
-        - 'Montserrat Alternates'
-        - 'Noto Sans Mono'
-        - 'Passion One'
-        - 'Playfair Display'
-        - 'Poppins'
-        - 'Roboto'
-        - 'Roboto Slab'
-    */
-}
-
-/*body*/
-*{
-    box-sizing:border-box;
-}
-html, body{
-    margin:0px;
-    padding:0px;
-}
-body{
-    background:var(--background);
-    color:var(--text);
-    font-size:var(--font-size);
-    font-family:var(--font);
-}
-/* links */
-a{
-    color:var(--links);
-    text-decoration:none;
-}
-a:visited{
-    color:var(--links);
-}
-a:hover{ 
-    color:var(--accent);
-}
-
-a:active{
-    color:#5731dd;
-}
-a.alt{
-    color: #fff;
-    text-decoration:none;
-}
-a.alt:visited{
-    color: #fff;
-}
-a.alt:hover{ 
-    color:#ffffffb2;
-}
-
-a.alt:active{
-    color:#ffffff63;
-}
-
-/* text */
-h1,h2,h3,h4,h5,h6{
-    margin:0;
-    font-family:var(--heading-font);
-    line-height: 150%;
-    text-align: center;
-}
-
-/* header */
-header{
-    text-align:center;
-    padding:10px;
-    background:var(--container-backgrounds);
-}
-
-/*body*/
-main{
-    margin:50px auto;
-    width:90%;
-    background:var(--container-backgrounds);
-    display:flex;
-    flex-flow:row wrap;
-    position:relative;
-    text-align: center;
-    justify-content:center;
-  
-}
-.item{
-    display:inline-block;
-    margin:10px;
-    height:190px;
-    width:350px;
-    overflow:hidden;
-    border:1px dotted var(--accent);
-    
-}
-.item img{
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 100%;
-}
-
-/* about */
-about{
-    margin:50px auto;
-    width:90%;
-    position:relative;
-    background:var(--container-backgrounds);
-    display:flex;
-    text-align: center;
-    justify-content:center;
-    flex-flow:row wrap;
-}
-section{
-    display:inline-block;
-    padding:20px;
-    margin:10px;
-    overflow:hidden;
-    border:1px dotted var(--accent);
-}
-.about-info{
-    width: 700px;
-}
-ul {
-    list-style: circle;
-    padding: 10px;
-    margin: 0;
-}
-.menu {
-    justify-content: space-around;
-}
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-/* socials */
-#socials nav {
-    display: flex;
-    justify-content: center;
-    flex-flow: row wrap;
-    list-style: none;
-}
-#socials nav li {
-    margin:1rem;
-    font-size: 2rem;
-}
-
-/* photo hover effect */
-.img__wrap {
-  position: relative;
-  display: inline-block;
-}
-.img__img {
-  vertical-align: bottom;
-
-}
-.img__description_layer {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(39, 39, 39, 0.6);
-  color: #fff;
-  visibility: hidden;
-  opacity: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  /* transition effect */
-  transition: opacity .5s, visibility .7s;
-}
-.img__wrap:hover .img__description_layer {
-  visibility: visible;
-  opacity: 1;
-}
-.img__description {
-  transition: .2s;
-  transform: translateY(1em);
-  text-align: center;
-  line-height: 150%;
-}
-.img__wrap:hover .img__description {
-  transform: translateY(0);
-}
-
-/* divider */
-.box-divider {
-    margin:1rem auto;
-    border-bottom:.5px dotted var(--accent);
-    width: 70%;
-}
-</style>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 </head>
 <body>
 
-<header>
-    <h1>Nikki Perry - Data Portfolio</h1>
-    <hr class="box-divider">
-    <h4>B.A. Mathematics, UNC Chapel Hill</h4>
-    <hr class="box-divider">
-    <article id="socials">
-        <nav>
-            <li><a href="mailto:info@hnperry.com"><i class="fa-solid fa-envelope"></i></a></li>
-            <li><a href="https://linkedin.com/in/nikki-perry-9bb57b15a/"><i class="fa-brands fa-linkedin"></i></a></li> 
-            <li><a href="https://github.com/hnperry"><i class="fa-brands fa-github"></i></a></li>
-        </nav>
-    </article>
-</header>
-
-<!--open container-->
-<main>
-    <!--begin portfolio section-->
-    <div class="grid-container">
-    <br><h3>Portfolio</h3>
-
-        <!--begin item-->
-        <div class="item">
-            <div class="img__wrap">
-                <img class="img__img" src="yteda.png" style="width:350px;height:190px;"/>
-                <div class="img__description_layer">
-                <p class="img__description"><a class="alt" href="https://github.com/hnperry/yteda">Youtube EDA</a><br>This is an exploratory data analysis project looking at Youtube channel data</p>
-                </div>
-            </div>
-        </div>
-        <!--end item-->
-
-        <!--begin item-->
-        <div class="item">
-            <div class="img__wrap">
-                <img class="img__img" src="chatgpt.jpg" />
-                <div class="img__description_layer">
-                  <p class="img__description"><a class="alt" href="https://github.com/hnperry/chatgpt-tweets">Sentiment Analysis of ChatGPT Tweets</a><br>This project explored term frequency, topic, and sentiment of tweets tagged #chatgpt</p>
-                </div>
-            </div>
-        </div>
-        <!--end item-->
-        
-        <!--begin item-->
-        <div class="item">
-            <div class="img__wrap">
-                <img class="img__img" src="amazonreviews.png" />
-                <div class="img__description_layer">
-                  <p class="img__description"><a class="alt" href="https://github.com/hnperry/amazonreviews">Amazon Reviews</a><br>This project scraped and analyzed reviews from Amazon</p>
-                </div>
-            </div>
-        </div>
-        <!--end item-->
-        
-        
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>Nikki</b> Perry</a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="mailto:info@hnperry.com" class="w3-bar-item w3-button">Contact</a>
+      <a href="https://github.com/hnperry" class="w3-bar-item w3-button">Github</a>
+      <a href="https://linkedin.com/in/nikki-perry-9bb57b15a/" class="w3-bar-item w3-button">LinkedIn</a>
     </div>
-    <!--end portfolio section-->
-</main>
+  </div>
+</div>
 
-<about>
-    <!--begin section-->
-    <section class="bio-info">
-        <center>
-            <img src="headshot.jpg" width=150px>
-        </center>
-    </section>
-    <!--end section-->
 
-    <!--begin section-->
-    <section class="about-info">
-        <h3>About</h3>
-        <p>I am an aspiring data analyst with experience in Python, Tableau, SQL, R, and PowerBI. I am interested in data visualization techniques and machine learning. This last sentence is me writing more stuff for css testing purposes.
-        </p>
-    </section>
-    <!--end section-->
 
-     <!--begin section-->
-     <section class="links">
-        <h3>Links</h3>
-        <ul class="menu">
-            <li><a href="coffee_prices.pdf">Resume</a></li>
-            <li><a href="coffee_prices.pdf">Transcript</a></li>
-        </ul>
-        
-    </section>
-    <!--end section-->
+<!-- Page content -->
+<div class="w3-content w3-padding" style="max-width:1564px">
+
+  <!-- Project Section -->
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
+  </div>
+
+  <div class="w3-row-padding">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href='https://github.com/hnperry/chatgpt-tweets'>Sentiment Analysis of ChatGPT Tweets (WIP)</a></div>
+        <img src="chatgpt.jpg" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href='https://public.tableau.com/app/profile/nikki.perry/viz/LGBTRightsSafetyAroundtheWorld/dashboard'>LGBT Rights & Safety Around the World</a></div>
+        <img src="lgbt.png" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href='https://github.com/hnperry/yteda'>Youtube Channel Exploratory Data Analysis</a></div>
+        <img src="yteda.png" alt="House" style="width:100%">
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-display-container">
+        <div class="w3-display-topleft w3-black w3-padding"><a href='https://github.com/hnperry/amazonreviews'>Amazon Book Reviews: Web Scraping and Data Visualization</a></div>
+        <img src="amazonreviews.png" alt="House" style="width:100%">
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+  <!-- About Section -->
+  <div class="w3-container w3-padding-32" id="about">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
+    <p>I am a data analyst and finance professional based in Washington, DC. I have a passion for telling stories with data through creative visualizations. I am a self-taught coder and have been developing my data analytics skills since June 2022. I received my Bachelor of Arts in Mathematics from UNC Chapel Hill in 2020.
+    </p>
+  </div>
+
+  <div class="w3-container w3-padding-32" id="projects">
+    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Certifications</h3>
+  </div>
+  <div class="w3-row-padding w3-grayscale">
+  <div class="w3-col l3 m6 w3-margin-bottom">
+    <h3>Machine Learning Specializaton</h3>
+    <p class="w3-opacity">Stanford DeepLearning.AI - In Progress</p>
+    <p>Building ML models with NumPy & scikit-learn, build & train supervised models for prediction & binary classification tasks</p>
+    <p><button class="w3-button w3-light-grey w3-block"><a href='https://www.coursera.org/specializations/machine-learning-introduction'>Course</a></button></p> 
+  </div>
+
+  
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <h3>Data Analytics Professional Certificate</h3>
+      <p class="w3-opacity">Google- Completed October 2022</p>
+      <p>Data cleaning, analysis, and visualization using spreadsheets, SQL, and R programming.</p>
+      <p><button class="w3-button w3-light-grey w3-block"><a href='https://www.coursera.org/professional-certificates/google-data-analytics'>Course</a></button></p>
+      
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <h3>Python for Everybody Specialization</h3>
+      <p class="w3-opacity">University of Michigan - Completed January 2023</p>
+      <p>Programming and analyzing data with Python. Developing programs to gather, clean, analyze, and visualize data.</p>
+      <p><button class="w3-button w3-light-grey w3-block"><a href='https://www.coursera.org/specializations/python'>Course</a></button></p>
+      
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <h3>Excel Skills for Business</h3>
+      <p class="w3-opacity">Macquarie University - Completed November 2022</p>
+      <p>Excel formulas and functions, automation and lookups, data analysis tools, charts, navigation, and dashboard creation</p>
+      <p><button class="w3-button w3-light-grey w3-block"><a href='https://www.coursera.org/specializations/excel'>Course</a></button></p>
+      
+    </div>
     
-</about>
-    
+  </div>
 
+  
+<!-- End page content -->
+</div>
 
 <!-- icons font -->
 <script src="https://kit.fontawesome.com/0993e30c04.js" crossorigin="anonymous"></script>
