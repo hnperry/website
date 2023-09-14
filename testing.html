@@ -1,24 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<!--
-gallery base page by @capecoding (owner: @foundcas)
-made with no javascript
 
-- keep the credit intact if no edits are made
-- if you have any feedback, questions, or suggestions send them to 
-  capecoding.tumblr.com/ask
-- more pages and themes can be found at capecoding.tumblr.com
-- if you found this base code useful consider supporting me on ko-fi:
-  ko-fi.com/foundcas
-
-88888   888888   88888  88888  88888  88888  88888   88888
-8       8    8   8   8  8      8      8   8  8    8  8
-8       888888   88888  8888   8      8   8  8    8  88888
-8       8    8   8      8      8      8   8  8    8  8
-88888   8    8   8      88888  88888  88888  88888   88888
--->
-<title>gallery</title>
+<title>Nikki Perry - Data Portfolio</title>
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -31,13 +15,13 @@ made with no javascript
 /*all colors and fonts can be changed here in the root section*/
 :root{
     --background:#f6f6f6;
-    --accent:#efae20;
+    --accent:#4525b9;
     --container-backgrounds:#eee;
     --text:#1e3026;
-    --links:#de375b;
+    --links:#12067e;
     --font-size:.9em;
-    --heading-font:'Merriweather';
-    --font:'poppins';
+    --heading-font:'Bitter';
+    --font:'Bitter';
     /*
     you can change the font to any standard browser font or the following       google fonts i have included:
         - 'Abril Fatface'
@@ -55,20 +39,7 @@ made with no javascript
         - 'Roboto Slab'
     */
 }
-/*tumblr controls*/
-.iframe-controls--desktop{
-    position:fixed;
-    right:0px;
-    z-index:999999999999;
-    filter:invert(100%);
-    -webkit-filter:invert(100%);
-    -webkit-transform:scale(0.8,0.8);
-    -webkit-transform-origin: 100% 0%;
-    -ms-transform-origin:100% 0%;
-    -ms-transform:scale(0.8,0.8);
-    transform:scale(0.8,0.8);
-    transform-origin:100% 0%;
-}
+
 /*body*/
 *{
     box-sizing:border-box;
@@ -83,189 +54,268 @@ body{
     font-size:var(--font-size);
     font-family:var(--font);
 }
-a, a:visited{
+/* links */
+a{
     color:var(--links);
     text-decoration:none;
+}
+a:visited{
+    color:var(--links);
 }
 a:hover{ 
     color:var(--accent);
 }
 
 a:active{
-    color:var(--text);
+    color:#5731dd;
 }
+a.alt{
+    color: #fff;
+    text-decoration:none;
+}
+a.alt:visited{
+    color: #fff;
+}
+a.alt:hover{ 
+    color:#ffffffb2;
+}
+
+a.alt:active{
+    color:#ffffff63;
+}
+
+/* text */
 h1,h2,h3,h4,h5,h6{
     margin:0;
     font-family:var(--heading-font);
+    line-height: 150%;
+    text-align: center;
 }
-/*header*/
+
+/* header */
 header{
     text-align:center;
     padding:10px;
     background:var(--container-backgrounds);
 }
-header img{
-    width:80px;
-    height:80px;
-}
-/*questions*/
+
+/*body*/
 main{
     margin:50px auto;
-    width:80%;
+    width:90%;
     background:var(--container-backgrounds);
     display:flex;
     flex-flow:row wrap;
+    position:relative;
+    text-align: center;
     justify-content:center;
+  
 }
 .item{
     display:inline-block;
     margin:10px;
-    height:200px;
-    width:250px;
+    height:190px;
+    width:350px;
     overflow:hidden;
-    border:1px solid var(--accent);
+    border:1px dotted var(--accent);
+    
 }
 .item img{
-    height:175px;
-    width:250px;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
 }
-.item-info h4{
-    display:inline;
+
+/* about */
+about{
+    margin:50px auto;
+    width:90%;
+    position:relative;
+    background:var(--container-backgrounds);
+    display:flex;
+    text-align: center;
+    justify-content:center;
+    flex-flow:row wrap;
 }
-.jump-to{
-    position:absolute;
-    margin-top:-20px;
+section{
+    display:inline-block;
+    padding:20px;
+    margin:10px;
+    overflow:hidden;
+    border:1px dotted var(--accent);
+}
+.about-info{
+    width: 700px;
+}
+ul {
+    list-style: circle;
+    padding: 10px;
+    margin: 0;
+}
+.menu {
+    justify-content: space-around;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+/* socials */
+#socials nav {
+    display: flex;
+    justify-content: center;
+    flex-flow: row wrap;
+    list-style: none;
+}
+#socials nav li {
+    margin:1rem;
+    font-size: 2rem;
+}
+
+/* photo hover effect */
+.img__wrap {
+  position: relative;
+  display: inline-block;
+}
+.img__img {
+  vertical-align: bottom;
+
+}
+.img__description_layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(39, 39, 39, 0.6);
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* transition effect */
+  transition: opacity .5s, visibility .7s;
+}
+.img__wrap:hover .img__description_layer {
+  visibility: visible;
+  opacity: 1;
+}
+.img__description {
+  transition: .2s;
+  transform: translateY(1em);
+  text-align: center;
+  line-height: 150%;
+}
+.img__wrap:hover .img__description {
+  transform: translateY(0);
+}
+
+/* divider */
+.box-divider {
+    margin:1rem auto;
+    border-bottom:.5px dotted var(--accent);
+    width: 70%;
 }
 </style>
 </head>
 <body>
 
 <header>
-    <img src="https://64.media.tumblr.com/746384302b0c38d8d8805ca2f868555e/56b1e23d58088b89-ce/s250x400/d261d05448c4e36b864e1a308727a2a7c1aa57db.png">
-    <h1>title</h1>
-    <h2>subtitle</h2>
-    <nav>
-        <a href="/">home</a> 
-        <a href="/ask">ask</a> 
-        <a href="https://capecoding.tumblr.com">credit</a>
-    </nav>
+    <h1>Nikki Perry - Data Portfolio</h1>
+    <hr class="box-divider">
+    <h4>B.A. Mathematics, UNC Chapel Hill</h4>
+    <hr class="box-divider">
+    <article id="socials">
+        <nav>
+            <li><a href="mailto:info@hnperry.com"><i class="fa-solid fa-envelope"></i></a></li>
+            <li><a href="https://linkedin.com/in/nikki-perry-9bb57b15a/"><i class="fa-brands fa-linkedin"></i></a></li> 
+            <li><a href="https://github.com/hnperry"><i class="fa-brands fa-github"></i></a></li>
+        </nav>
+    </article>
 </header>
 
 <!--open container-->
 <main>
-    <div class="jump-to">
-        <a href="#section1">section 1</a> |
-        <a href="#section2">section 2</a> |
-        <a href="#section3">section 3</a>
-    </div>
-    <!--begin section-->
+    <!--begin portfolio section-->
     <div class="grid-container">
-    <h3 id="section1">section 1</h3>
-        <!--begin item-->
-        <div class="item">
-            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
-            <div class="item-info">
-                <h4>title</h4>
-                - <a href="/">link</a>
-            </div>
-        </div>
-        <!--end item-->
-        
-        <!--begin item-->
-        <div class="item">
-            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
-            <div class="item-info">
-                <h4>title</h4>
-                - <a href="/">link</a>
-            </div>
-        </div>
-        <!--end item-->
-        
-        <!--begin item-->
-        <div class="item">
-            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
-            <div class="item-info">
-                <h4>title</h4>
-                - <a href="/">link</a>
-            </div>
-        </div>
-        <!--end item-->
-    </div>
-    <!--end section-->
-    
-    <!--begin section-->
-    <div class="grid-container">
-    <h3 id="section2">section 2</h3>
-        <!--begin item-->
-        <div class="item">
-            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
-            <div class="item-info">
-                <h4>title</h4>
-                - <a href="/">link</a>
-            </div>
-        </div>
-        <!--end item-->
-        
-        <!--begin item-->
-        <div class="item">
-            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
-            <div class="item-info">
-                <h4>title</h4>
-                - <a href="/">link</a>
-            </div>
-        </div>
-        <!--end item-->
-        
-        <!--begin item-->
-        <div class="item">
-            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
-            <div class="item-info">
-                <h4>title</h4>
-                - <a href="/">link</a>
-            </div>
-        </div>
-        <!--end item-->
-    </div>
-    <!--end section-->
-    
-    
-    <!--begin section-->
-    <div class="grid-container">
-    <h3 id="section3">section 3</h3>
-        <!--begin item-->
-        <div class="item">
-            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
-            <div class="item-info">
-                <h4>title</h4>
-                - <a href="/">link</a>
-            </div>
-        </div>
-        <!--end item-->
-        
-        <!--begin item-->
-        <div class="item">
-            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
-            <div class="item-info">
-                <h4>title</h4>
-                - <a href="/">link</a>
-            </div>
-        </div>
-        <!--end item-->
-        
-        <!--begin item-->
-        <div class="item">
-            <img src="https://64.media.tumblr.com/51795c9c4522d65cc564078c4447bd2b/697057c0a6cfd673-1d/s1280x1920/9b3da19ef4e3e19d24b544c88558b64891c30238.gifv">
-            <div class="item-info">
-                <h4>title</h4>
-                - <a href="/">link</a>
-            </div>
-        </div>
-        <!--end item-->
-    </div>
-    <!--end section-->
+    <br><h3>Portfolio</h3>
 
+        <!--begin item-->
+        <div class="item">
+            <div class="img__wrap">
+                <img class="img__img" src="yteda.png" style="width:350px;height:190px;"/>
+                <div class="img__description_layer">
+                <p class="img__description"><a class="alt" href="https://github.com/hnperry/yteda">Youtube EDA</a><br>This is an exploratory data analysis project looking at Youtube channel data</p>
+                </div>
+            </div>
+        </div>
+        <!--end item-->
+
+        <!--begin item-->
+        <div class="item">
+            <div class="img__wrap">
+                <img class="img__img" src="chatgpt.jpg" />
+                <div class="img__description_layer">
+                  <p class="img__description"><a class="alt" href="https://github.com/hnperry/chatgpt-tweets">Sentiment Analysis of ChatGPT Tweets</a><br>This project explored term frequency, topic, and sentiment of tweets tagged #chatgpt</p>
+                </div>
+            </div>
+        </div>
+        <!--end item-->
+        
+        <!--begin item-->
+        <div class="item">
+            <div class="img__wrap">
+                <img class="img__img" src="amazonreviews.png" />
+                <div class="img__description_layer">
+                  <p class="img__description"><a class="alt" href="https://github.com/hnperry/amazonreviews">Amazon Reviews</a><br>This project scraped and analyzed reviews from Amazon</p>
+                </div>
+            </div>
+        </div>
+        <!--end item-->
+        
+        
+    </div>
+    <!--end portfolio section-->
 </main>
-<!--close container-->
 
+<about>
+    <!--begin section-->
+    <section class="bio-info">
+        <center>
+            <img src="headshot.jpg" width=150px>
+        </center>
+    </section>
+    <!--end section-->
+
+    <!--begin section-->
+    <section class="about-info">
+        <h3>About</h3>
+        <p>I am an aspiring data analyst with experience in Python, Tableau, SQL, R, and PowerBI. I am interested in data visualization techniques and machine learning. This last sentence is me writing more stuff for css testing purposes.
+        </p>
+    </section>
+    <!--end section-->
+
+     <!--begin section-->
+     <section class="links">
+        <h3>Links</h3>
+        <ul class="menu">
+            <li><a href="coffee_prices.pdf">Resume</a></li>
+            <li><a href="coffee_prices.pdf">Transcript</a></li>
+        </ul>
+        
+    </section>
+    <!--end section-->
+    
+</about>
+    
+
+
+<!-- icons font -->
+<script src="https://kit.fontawesome.com/0993e30c04.js" crossorigin="anonymous"></script>
 </body>
 </html>
