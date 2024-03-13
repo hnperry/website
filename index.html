@@ -1,128 +1,162 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Nikki Perry - Data Analyst Portfolio</title>
+<title>Nikki Perry - Analytics Portfolio</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {font-family: "Lato", sans-serif}
+.mySlides {display: none}
+</style>
 </head>
 <body>
 
-<!-- Navbar (sit on top) -->
+<!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-white w3-wide w3-padding w3-card">
-    <a href="#home" class="w3-bar-item w3-button"><b>Nikki Perry</b> Analytics Portfolio</a>
-    <!-- Float links to the right. Hide them on small screens -->
+  <div class="w3-bar w3-black w3-wide w3-padding w3-card">
+    <a href="#home" class="w3-bar-item w3-button"><b>nikki perry</b> analytics portfolio</a>
     <div class="w3-right w3-hide-small">
-      <a href="mailto:info@hnperry.com" class="w3-bar-item w3-button">Contact</a>
-      <a href="https://github.com/hnperry" class="w3-bar-item w3-button">Github</a>
-      <a href="https://linkedin.com/in/nikki-perry-9bb57b15a/" class="w3-bar-item w3-button">LinkedIn</a>
-    </div>
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-padding-large">home</a>
+    <a href="#about" class="w3-bar-item w3-button w3-padding-large w3-hide-small">about</a>
+    <a href="#projects" class="w3-bar-item w3-button w3-padding-large w3-hide-small">projects</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">contact</a>
+  </div>
   </div>
 </div>
 
-
+<!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
+<div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <a href="#about" class="w3-bar-item w3-button w3-padding-large" >about</a>
+  <a href="#projects" class="w3-bar-item w3-button w3-padding-large" >projects</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" >contact</a>
+</div>
 
 <!-- Page content -->
-<div class="w3-content w3-padding" style="max-width:1564px">
-
-  <!-- Project Section -->
-  <div class="w3-container w3-padding-32" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Projects</h3>
-  </div>
-
-  <div class="w3-row-padding">
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding"><a href='https://public.tableau.com/app/profile/nikki.perry/viz/ConnecticutHousingAffordability/Dashboard1'>Connecticut Housing Affordability: Real Estate Sales Analysis</a></div>
-        <img src="ct.png" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding"><a href='https://public.tableau.com/app/profile/nikki.perry/viz/KPIDashboardWIP/Dashboard1'>Superstore Year-End Review: KPI Dashboard</a></div>
-        <img src="kpi.png" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding"><a href='https://github.com/hnperry/chatgpt-tweets'>Natural Language Processing: Sentiment Analysis of ChatGPT Tweets</a></div>
-        <img src="chatgpt.jpg" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding"><a href='https://public.tableau.com/app/profile/nikki.perry/viz/LGBTRightsSafetyAroundtheWorld/dashboard2'>Diversity and Inclusion Insights: Visualizing LGBT Rights and Safety Data</a></div>
-        <img src="lgbt.png" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding"><a href='https://github.com/hnperry/yteda'>Digital Media Analytics: Youtube Channel Insights</a></div>
-        <img src="yteda.png" alt="House" style="width:100%">
-      </div>
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <div class="w3-display-container">
-        <div class="w3-display-topleft w3-black w3-padding"><a href='https://github.com/hnperry/amazonreviews'>Evaluating Customer Sentiment: Web Scraping and Visualizing Amazon Reviews</a></div>
-        <img src="amazonreviews.png" alt="House" style="width:100%">
-      </div>
-    </div>
-  </div>
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <div id="particles-js"></div>
+  <script src="particles.js"></script>
+</div>
 
 
-  </div>
-
-  <!-- About Section -->
-  <div class="w3-container w3-padding" id="about">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">About</h3>
-    <p>I am Nikki, I am a data analyst based in Washington, DC. 
+  <!-- about -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="about">
+    <h2 class="w3-wide">ABOUT</h2>
+    <p class="w3-opacity"><i>~ at the intersection of data and art ~</i></p>
+    <p class="w3-justify">Hi! I'm Nikki, a data analyst based in Washington, DC. 
       I have a strong background in mathematics and data analysis, proficiency in Python, SQL, Tableau, PowerBI, and a passion for extracting insights from complex datasets. 
       I have experience with the full data lifecycle, from accurately capturing data, through data preparation, analysis, and management, all the way to impactful and concise presentation of insights. 
-      I am a self-taught coder and have been developing my data analytics skills since September 2020. I am a motivated self starter who is always looking to learn something new. 
-      I received my Bachelor of Arts in Mathematics from UNC Chapel Hill in 2020.
-    </p>
+      I am a self-taught coder and have been developing my data analytics skills since September 2020. 
+      I received my Bachelor of Arts in Mathematics from UNC Chapel Hill in 2020.</p>
   </div>
 
-  <div class="w3-container w3-padding" id="projects">
-    <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16">Certificates</h3>
-  </div>
-  <div class="w3-row-padding w3-grayscale">
-  <div class="w3-col l3 m6 w3-margin-bottom">
-    <h3>Machine Learning Specializaton</h3>
-    <p class="w3-opacity">Stanford DeepLearning.AI - In Progress</p>
-    <p>Building ML models with NumPy & scikit-learn, build & train supervised models for prediction & binary classification tasks</p>
-    <p><button class="w3-button w3-light-grey w3-block"><a href='https://www.coursera.org/specializations/machine-learning-introduction'>Course</a></button></p> 
+  <!-- projects -->
+  <div class="w3-black" id="tour">
+    <div class="w3-container w3-content w3-padding-64" style="max-width:1600px">
+      <h2 class="w3-wide w3-center">PROJECTS</h2>
+
+      <div class="w3-row-padding w3-padding-64" style="margin:0 -16px">
+
+        <div class="w3-third w3-margin-bottom">
+          <img width=1600px height=315px src="ct.png" alt="CT Housing" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Connecticut Housing Affordability: Real Estate Sales Analysis</b></p>
+            <p class="w3-opacity">An interactive Tableau dashboard that analyzes what factors impact real estate prices in Connecticut</p>
+            <a class="w3-button w3-black w3-margin-bottom"href='https://public.tableau.com/app/profile/nikki.perry/viz/ConnecticutHousingAffordability/Dashboard1'>View</a>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img width=1600px height=315px src="kpi.png" alt="KPI Dash" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Superstore Year-End Review: KPI Dashboard</b></p>
+            <p class="w3-opacity">This sample dashboard breaks down and visualizes sales metrics at a fictional superstore</p>
+            <a class="w3-button w3-black w3-margin-bottom"href='https://public.tableau.com/app/profile/nikki.perry/viz/KPIDashboardWIP/Dashboard1'>View</a>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img width=1600px height=315px src="chatgpt.jpg" alt="NLP" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Natural Language Processing: Sentiment Analysis of ChatGPT Tweets</b></p>
+            <p class="w3-opacity">A project testing out sentiment analysis techniques on tweets that mention chatGPT</p>
+            <a class="w3-button w3-black w3-margin-bottom"href='https://github.com/hnperry/chatgpt-tweets'>View</a>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img width=1600px height=315px src="lgbt.png" alt="LGBT Safety" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Diversity and Inclusion Insights: Visualizing LGBT Rights and Safety Data</b></p>
+            <p class="w3-opacity">An interactive Tableau dashboard that explores safety metrics for LGBT communties around the world</p>
+            <a class="w3-button w3-black w3-margin-bottom"href='https://public.tableau.com/app/profile/nikki.perry/viz/LGBTRightsSafetyAroundtheWorld/dashboard2'>View</a>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img width=1600px height=315px src="yteda.png" alt="Youtube" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Digital Media Analytics: Youtube Channel Insights</b></p>
+            <p class="w3-opacity">An exploratory analysis and visualization of key Youtube channel metrics using pandas Python library</p>
+            <a class="w3-button w3-black w3-margin-bottom"href='https://github.com/hnperry/yteda'>View</a>
+          </div>
+        </div>
+        <div class="w3-third w3-margin-bottom">
+          <img width=1600px height=315px src="amazonreviews.png" alt="Amazon" style="width:100%" class="w3-hover-opacity">
+          <div class="w3-container w3-white">
+            <p><b>Evaluating Customer Sentiment: Web Scraping Amazon Reviews</b></p>
+            <p class="w3-opacity">An analysis of Haruki Murakami book reviews scraped from Amazon, visualized in Tableau</p>
+            <a class="w3-button w3-black w3-margin-bottom"href='https://github.com/hnperry/amazonreviews'>View</a>
+          </div>
+        </div>
+
+        
+        </div>
+    </div>
   </div>
 
+  <!-- contact -->
+  <div class="w3-container w3-content w3-padding-64" style="max-width:800px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> <a href="https://www.youtube.com/watch?v=4T1RMuoQnKo" class="w3-bar-item w3-button w3-padding-small">Arlington, VA</a><br>
+        <i class="fa fa-envelope" style="width:30px"> </i> <a href="mailto:info@hnperry.com" class="w3-bar-item w3-button w3-padding-small">info@hnperry.com</a><br>
+        <i class="fa fa-github" style="width:30px"> </i> <a href="https://github.com/hnperry" class="w3-bar-item w3-button w3-padding-small">Github</a><br>
+        <i class="fa fa-linkedin" style="width:30px"> </i> <a href="https://linkedin.com/in/nikki-perry-9bb57b15a/" class="w3-bar-item w3-button w3-padding-small">Linkedin</a><br>
+      </div>
+      <div class="w3-col m6">
+        <form action="/action_page.php" target="_blank">
+          <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
+            </div>
+            <div class="w3-half">
+              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
+            </div>
+          </div>
+          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
+        </form>
+      </div>
+    </div>
+  </div>
   
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <h3>Data Analytics Professional Certificate</h3>
-      <p class="w3-opacity">Google- Completed October 2022</p>
-      <p>Data cleaning, analysis, and visualization using spreadsheets, SQL, and R programming.</p>
-      <p><button class="w3-button w3-light-grey w3-block"><a href='https://www.coursera.org/professional-certificates/google-data-analytics'>Course</a></button></p>
-      
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <h3>Python for Everybody Specialization</h3>
-      <p class="w3-opacity">University of Michigan - Completed January 2023</p>
-      <p>Programming and analyzing data with Python. Developing programs to gather, clean, analyze, and visualize data.</p>
-      <p><button class="w3-button w3-light-grey w3-block"><a href='https://www.coursera.org/specializations/python'>Course</a></button></p>
-      
-    </div>
-    <div class="w3-col l3 m6 w3-margin-bottom">
-      <h3>Excel Skills for Business</h3>
-      <p class="w3-opacity">Macquarie University - Completed November 2022</p>
-      <p>Excel formulas and functions, automation and lookups, data analysis tools, charts, navigation, and dashboard creation</p>
-      <p><button class="w3-button w3-light-grey w3-block"><a href='https://www.coursera.org/specializations/excel'>Course</a></button></p>
-      
-    </div>
-    
-  </div>
-
-  
-<!-- End page content -->
+<!-- End Page Content -->
 </div>
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-10 w3-center w3-opacity w3-light-grey w3-xlarge">
+  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+</footer>
+
+
+<!-- particles.js lib - https://github.com/VincentGarreau/particles.js --> 
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> 
+<!-- stats.js lib --> <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+
+</body>
+</html>
+
 
 <!-- icons font -->
 <script src="https://kit.fontawesome.com/0993e30c04.js" crossorigin="anonymous"></script>
