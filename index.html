@@ -23,7 +23,7 @@ body {font-family: "Lato", sans-serif}
 <body>
 
 <!-- Navbar -->
-<div class="w3-top">
+<div class="w3-top" style=" z-index:1000">
   <div class="w3-bar w3-black w3-wide w3-padding w3-card">
     <a href="#home" class="w3-bar-item w3-button"><b>nikki perry</b> analytics portfolio</a>
     <div class="w3-right w3-hide-small">
@@ -54,18 +54,25 @@ body {font-family: "Lato", sans-serif}
 
 
   <!-- about -->
-  <div class="w3-container w3-content w3-center w3-padding-64  w3-animate-opacity w3-round-small" style="max-width:800px" id="about">
-    <h2 class="w3-wide">ABOUT</h2>
-    <p class="w3-opacity"><i>~ at the intersection of data and art ~</i></p>
-    <p class="w3-justify">Hi! I'm Nikki, a data analyst based in Washington, DC. 
-      I have a strong background in mathematics and data analysis, proficiency in Python, SQL, Tableau, PowerBI, and a passion for extracting insights from complex datasets. 
-      I have experience with the full data lifecycle, from accurately capturing data, through data preparation, analysis, and management, all the way to impactful and concise presentation of insights. 
-      I am a self-taught coder and have been developing my data analytics skills since September 2020. 
-      I received my Bachelor of Arts in Mathematics from UNC Chapel Hill in 2020.</p>
+
+  
+  <div class="w3-container w3-content w3-center w3-padding-64  w3-animate-opacity w3-round-small" style="max-width:850px" id="about"><br>
+    <h2 class="w3-wide">WHO AM I?</h2><br>
+    <div class="w3-third">
+      <img src="selfieee.jpg" class="w3-round w3-margin-bottom" alt="Random Name" style="padding:15px; border-radius:10%;width:100%;position:relative; z-index:100">
+    </div>
+    <p class="w3-twothird w3-light-grey w3-justify" style="border-radius: 10% 10%; padding:10px;position:relative; z-index:90;padding:3%">
+      Hi! I'm <b>Nikki</b>, a data analysis and visualization specialist based in Washington, DC. <br><br>
+      When I'm not eating soup dumplings, I'm extracting insights from complex datasets and trying to find the best way to visualize that data. 
+      I have experience with the full data lifecycle, from capture and management to concise and thoughtful presentation. I am especially passionate about the intersection where art meets data. 
+      I have been developing my data analysis skills since 2016.<br><br>
+      I recieved my <b>Mathematics</b> degree from <b>UNC Chapel Hill</b> in May 2020.<br><br>
+      Favorite tools: <b>Power BI, Tableau, Python, SQL</b>
+</p>
   </div>
 
   <!-- projects -->
-  <div class="w3-black" id="tour">
+  <div class="w3-black" style="position:relative; z-index:100" id="projects">
     <div class="w3-container w3-content w3-padding-64" style="max-width:1600px">
     
       <h2 class="w3-wide w3-center">PROJECTS</h2>
@@ -73,8 +80,8 @@ body {font-family: "Lato", sans-serif}
       <div class="w3-row-padding w3-padding-64" style="margin:0 -16px">
 
         
-        <div class="w3-third w3-margin-bottom ">
-          <img width=1600px height=315px src="ct.png" alt="CT Housing" style="width:100%" class="w3-hover-opacity">
+        <div class="w3-third w3-margin-bottom">
+          <img width=1600px height=280px src="ct.png" alt="CT Housing" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <p><b>Connecticut Housing Affordability: Real Estate Sales Analysis</b></p>
             <p class="w3-opacity">An interactive Tableau dashboard that analyzes what factors impact real estate prices in Connecticut</p>
@@ -82,7 +89,7 @@ body {font-family: "Lato", sans-serif}
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img width=1600px height=315px src="kpi.png" alt="KPI Dash" style="width:100%" class="w3-hover-opacity">
+          <img width=1600px height=280px src="kpi.png" alt="KPI Dash" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <p><b>Superstore Year-End Review: KPI Dashboard</b></p>
             <p class="w3-opacity">This sample dashboard breaks down and visualizes sales metrics at a fictional superstore</p>
@@ -90,7 +97,7 @@ body {font-family: "Lato", sans-serif}
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img width=1600px height=315px src="chatgpt.jpg" alt="NLP" style="width:100%" class="w3-hover-opacity">
+          <img width=1600px height=280px src="chatgpt.jpg" alt="NLP" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <p><b>Natural Language Processing: Sentiment Analysis of ChatGPT Tweets</b></p>
             <p class="w3-opacity">A project testing out sentiment analysis techniques on tweets that mention chatGPT</p>
@@ -98,7 +105,7 @@ body {font-family: "Lato", sans-serif}
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img width=1600px height=315px src="lgbt.png" alt="LGBT Safety" style="width:100%" class="w3-hover-opacity">
+          <img width=1600px height=280px src="lgbt.png" alt="LGBT Safety" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <p><b>Diversity and Inclusion Insights: Visualizing LGBT Rights and Safety Data</b></p>
             <p class="w3-opacity">An interactive Tableau dashboard that explores safety metrics for LGBT communties around the world</p>
@@ -106,7 +113,7 @@ body {font-family: "Lato", sans-serif}
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img width=1600px height=315px src="yteda.png" alt="Youtube" style="width:100%" class="w3-hover-opacity">
+          <img width=1600px height=280px src="yteda.png" alt="Youtube" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <p><b>Digital Media Analytics: Youtube Channel Insights</b></p>
             <p class="w3-opacity">An exploratory analysis and visualization of key Youtube channel metrics using pandas Python library</p>
@@ -114,7 +121,7 @@ body {font-family: "Lato", sans-serif}
           </div>
         </div>
         <div class="w3-third w3-margin-bottom">
-          <img width=1600px height=315px src="amazonreviews.png" alt="Amazon" style="width:100%" class="w3-hover-opacity">
+          <img width=1600px height=280px src="amazonreviews.png" alt="Amazon" style="width:100%" class="w3-hover-opacity">
           <div class="w3-container w3-white">
             <p><b>Evaluating Customer Sentiment: Web Scraping Amazon Reviews</b></p>
             <p class="w3-opacity">An analysis of Haruki Murakami book reviews scraped from Amazon, visualized in Tableau</p>
@@ -127,29 +134,31 @@ body {font-family: "Lato", sans-serif}
     </div>
   </div>
 
+
   <!-- contact -->
-  <div class="w3-container w3-content w3-padding-64 w3-animate-opacity " style="max-width:800px" id="contact">
+  <div class="w3-container w3-content w3-padding-64 w3-animate-opacity" style="max-width:700px" id="contact">
     <h2 class="w3-wide w3-center">CONTACT</h2>
     <div class="w3-row w3-padding-32">
-      <div class="w3-col m6 w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker" style="width:30px"></i> <a href="https://www.youtube.com/watch?v=4T1RMuoQnKo" class="w3-bar-item w3-button w3-padding-small">Arlington, VA</a><br>
+      <div class="w3-col m6 w3-large w3-margin-bottom w3-light-grey"style="border-radius: 5%/10%; padding:20px;position:relative; z-index:90;">
+        <i class="fa fa-map-marker" style="width:30px"></i> <a href="https://www.youtube.com/watch?v=4T1RMuoQnKo" class="w3-bar-item w3-button w3-padding-small">Washington, DC</a><br>
         <i class="fa fa-envelope" style="width:30px"> </i> <a href="mailto:info@hnperry.com" class="w3-bar-item w3-button w3-padding-small">info@hnperry.com</a><br>
         <i class="fa fa-github" style="width:30px"> </i> <a href="https://github.com/hnperry" class="w3-bar-item w3-button w3-padding-small">Github</a><br>
         <i class="fa fa-linkedin" style="width:30px"> </i> <a href="https://linkedin.com/in/nikki-perry-9bb57b15a/" class="w3-bar-item w3-button w3-padding-small">Linkedin</a><br>
       </div>
-      <div class="w3-col m6">
-        <form action="/action_page.php" target="_blank">
+      <div class="w3-col m6 w3-justify" style="opacity:90%;border-radius: 5%/10%; padding:20px;position:relative; z-index:90">
+        <form method="post" action="send_email.php">
           <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Name" required name="Name">
-            </div>
-            <div class="w3-half">
-              <input class="w3-input w3-border" type="text" placeholder="Email" required name="Email">
-            </div>
+              <div class="w3-half">
+                  <input class="w3-input w3-border" type="text" placeholder="Name" required name="name">
+              </div>
+              <div class="w3-half">
+                  <input class="w3-input w3-border" type="email" placeholder="Email" required name="email">
+              </div>
           </div>
-          <input class="w3-input w3-border" type="text" placeholder="Message" required name="Message">
+          <textarea class="w3-input w3-border" placeholder="Message" required name="message"></textarea>
           <button class="w3-button w3-black w3-section w3-right" type="submit">SEND</button>
-        </form>
+      </form>
+      
       </div>
     </div>
   </div>
