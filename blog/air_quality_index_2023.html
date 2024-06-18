@@ -78,11 +78,8 @@ body {font-family: "Lato", sans-serif}
               <br><br>
               So, how was the air quality in 2023? Poke around on the visualization below to find out!
             </h6>
-
-            </div>
-
-            
             <center>
+            </div>
             <div class='tableauPlaceholder' id='viz1713885522342' style='position: relative'>
               <noscript><a href='#'><img alt='AirQuality ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ai&#47;AirQualityTracker&#47;AirQuality&#47;1_rss.png' style='border: none' /></a></noscript>
               <object class='tableauViz'  style='display:none;'>
@@ -110,22 +107,24 @@ body {font-family: "Lato", sans-serif}
                                        vizElement.parentNode.insertBefore(scriptElement, vizElement);       
                                                 </script>
               </center>
-          
+              </div>
               <div class="w3-container w3-light-grey w3-center" style="padding: 25px 50px 25px 50px">
                 <h6 class="w3-justify">        
-                  I made this dashboard using data from the EPA. They have air quality datasets publicly available on their website <a href="https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI">here</a>. 
-                  However, when I downloaded the 2023 dataset, I noticed that it only had data until October. Since I wanted to make the Month/Day graphic on the right hand side, I had to find another way to get all of the 2023 data.
-                  I ended up manually compiling datasets found <a href="https://www.epa.gov/outdoor-air-quality-data/air-quality-index-daily-values-report">here</a>. 
-                  I had to submit a query for each metro area, and I ended up with around 30 datasets. 
-                  I started out by selecting the top 20~ish most populated metro areas I could find on the list, and then I added some additional datasets for places I was interested in, or places where my friends lived.
-                  After gathering all the datasets, I wrote a python script to compile them and add some additional information on the locations and AQI score (State, City, AQI Category). 
-                  The code for this <a href ="https://www.kaggle.com/code/nikkiperry/aqi-datasets-compiler">can be found on my Kaggle account</a>. 
-                  <br><br>
-                  If you want to see the data for a metro area I haven't included, let me know! It can easily be added to the dataset through the compiler on Kaggle.
-                  Downloading the datasets is a manual process, but this project is very scalable. Hopefully the EPA will publish their own fully compiled 2023 dataset soon so this manual process is eliminated!
-                  I will be on the lookout for it, and replace the dataset once it is available.
-                  <br><br>
-                  If you read this far, thank you for reading! Until next time~
+                  <p>I made this dashboard using data from the EPA. They have air quality datasets publicly available on their website <a href="https://aqs.epa.gov/aqsweb/airdata/download_files.html#AQI">here</a>. 
+                    However, when I downloaded the 2023 dataset, I noticed that it only had data until October. Since I wanted to make the Month/Day graphic on the right hand side, I had to find another way to get all of the 2023 data.
+                    I ended up manually compiling datasets found <a href="https://www.epa.gov/outdoor-air-quality-data/air-quality-index-daily-values-report">here</a>. 
+                    I had to submit a query for each metro area, and I ended up with around 30 datasets. 
+                    I started out by selecting the top 20~ish most populated metro areas I could find on the list, and then I added some additional datasets for places I was interested in, or places where my friends lived.
+                    After gathering all the datasets, I wrote a python script to compile them and add some additional information on the locations and AQI score (State, City, AQI Category). 
+                    The code for this <a href ="https://www.kaggle.com/code/nikkiperry/aqi-datasets-compiler">can be found on my Kaggle account</a>. 
+                  </p>
+                  <p>If you want to see the data for a metro area I haven't included, let me know! It can easily be added to the dataset through the compiler on Kaggle.
+                    Downloading the datasets is a manual process, but this project is very scalable. Hopefully the EPA will publish their own fully compiled 2023 dataset soon so this manual process is eliminated!
+                    I will be on the lookout for it, and replace the dataset once it is available.
+                  </p>
+                  <p>If you read this far, thank you for reading! Until next time~
+                  </p>
+
                 </h6>
 
     
